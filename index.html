@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <title>Frontend Assignment</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>A General Questionnaire</h1>
+        </header>
+        <main>
+            <div>
+                <form>
+                    <p><b>Question 1: </b>What programming language do you understand?</p>
+                    <label>
+                        <input type="radio" value="Python" name="optradio" >Python
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" value="Java" name="optradio">Java
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" value="Javascript" name="optradio">JavaScript
+                    </label>
+                    <br>
+                    
+                    <button type="button" onclick=" checkButton()"> Submit </button>
+
+                    <h3 id="disp" style= "color:green"> </h3>  
+                    <h4 id="error" style= "color:red"> </h4>  
+                </form>
+            </div>
+
+            <div>
+                <form>
+                    <p><b>Question 2: </b>What is the smallest html head tag?</p>
+                    <select id = "myList" onchange = "smallestTag()">
+                    <option>---Choose option--- </option>
+                    <option>h1</option>
+                    <option>h2</option>
+                    <option>h3</option>
+                    <option>h4</option>
+                    <option>h5</option>
+                    <option>h6</option>
+                    </select>
+
+                    <p> Your selected answer is:   
+                        <input type = "text" id = "smallest" size = "20"> 
+                    </p>
+                </form>  
+                
+
+                <div>
+                
+                    <p><b>Question 3:</b> Are you a web developer? </p>  
+                    Yes: <input type="checkbox" id="myCheck1" value="Yes, I'm a web developer">  
+                    No: <input type="checkbox" id="myCheck2" value="No, I'm not a web developer">  
+                    <br> <br>  
+                    <button onclick="checkCheckbox()">Submit</button> <br>  
+                    
+                    <h4 style="color:green" id="result"></h3>   
+                    <h4 style="color:red" id="error"></h3>  
+                </div>
+                <br>
+
+                <div>
+                    <form name="myform"  method="post" action="#" onsubmit="return validateemail();">
+                        <p><b>Question 4:</b></p>  
+                        Email: <input type="text" name="email">
+                        <br>  
+                          
+                        <input type="submit" value="submit">  
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+</body>
+</html>
